@@ -1,0 +1,14 @@
+{
+  "name": "vaporwave.fish",
+  "version": "1.0.0",
+  "description": "chill vaporwave beats with chill fish aesthetic",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server -p 8080 ."
+  },
+  "author": "Alex Muench and Samuel Joy",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>v a p o r w a v e . f i s h</title>
+    <meta name="description" content="ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22672824-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-22672824-2');
+    </script>
+    <style>
+        #splash {
+            display: none;
+        }
+
+        #vaporfish {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        #vaporfish #vidcontain {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            z-index: -1;
+        }
+
+        #vaporfish video {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            min-height: 50%;
+            min-width: 50%;
+        }
+
+        #playpause img {
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; overflow: hidden;" class="paused">
+    <div id="splash">
+        <div
+            style="display: grid;height: 100vh;width: 100vw;grid-template: 1fr / 1fr;align-items: center;justify-items: center;">
+            <div style="z-index: 2;">
+                <img src="/vaporwave_fish.jpg" width="300" height="300">
+                <br>
+                🐟🐟🐟
+                <br>
+                <span style="background: #fff">ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ</span>
+                <br>
+                🐟🐟🐟
+            </div>
+        </div>
+        <style>
+            .lighth {
+                position: fixed;
+                bottom: 0;
+                background-color: #fff;
+                height: 300px;
+                width: 100%;
+                perspective: 100px;
+                overflow: hidden
+            }
+
+            .lighth::before {
+                content: '';
+                position: absolute;
+                background: linear-gradient(0, transparent, #fff);
+                top: 0;
+                right: -100vh;
+                left: -100vh;
+                height: 20px;
+                z-index: 99
+            }
+
+            .lightv {
+                position: relative;
+                background-color: #fff;
+                color: #e5279d;
+                height: 100%;
+                width: 100%;
+                transform: rotateX(25deg);
+            }
+
+            .lightv::before {
+                content: '';
+                position: absolute;
+                background-color: currentColor;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                top: -100vh;
+                bottom: -100vh;
+                left: 50%;
+                width: 10px;
+                box-shadow: -140px 0 0 currentColor, -290px 0 0 currentColor, -440px 0 0 currentColor, -590px 0 0 currentColor, -740px 0 0 currentColor, -890px 0 0 currentColor, -1040px 0 0 currentColor, -1190px 0 0 currentColor,
+                    140px 0 0 currentColor, 290px 0 0 currentColor, 440px 0 0 currentColor, 590px 0 0 currentColor, 740px 0 0 currentColor, 890px 0 0 currentColor, 1040px 0 0 currentColor, 1190px 0 0 currentColor
+            }
+
+            .lightv::after {
+                content: '';
+                position: absolute;
+                background-color: currentColor;
+                top: 0;
+                right: -100vh;
+                left: -100vh;
+                height: 10px;
+                box-shadow: 0 90px 0 0 currentColor, 0 190px 0 currentColor, 0 290px currentColor,
+                    0 -90px 0 0 currentColor, 0 -190px 0 currentColor, 0 -290px currentColor;
+                animation: lightv 1s linear infinite;
+            }
+
+            @keyframes lightv {
+                from {
+                    transform: translateY(0)
+                }
+
+                to {
+                    transform: translateY(97.7px)
+                }
+            }
+        </style>
+        <section class="lighth">
+            <section class="lightv"></section>
+        </section>
+        <div style="position: fixed;top: 0;right: 0;">
+            <a href="https://twitter.com/amuench">🦈@amuench</a>
+            <br>
+            <a href="https://twitter.com/RevGhostMusic">👻@RevGhostMusic</a>
+        </div>
+    </div>
+    <div id="vaporfish">
+        <div style="position: fixed;top: 0;right: 0; text-align: right;">
+            <a style="color: white;" target="_blank" href="https://twitter.com/amuench">🦈@amuench</a>
+            <br>
+            <a style="color: white;" target="_blank" href="https://twitter.com/RevGhostMusic">👻@RevGhostMusic</a>
+        </div>
+        <div style="height: 100vh;width: 100vw;">
+            <div style="z-index: 2; position: fixed; bottom: 30px; left: 30px;">
+                <img src="/vaporwave_fish.jpg" width="300" height="300">
+                <br>
+                🐟🐟🐟
+                <br>
+                <span style="background: #fff">【ｆｉｓｈｗａｖｅ．　　ｅｍｂｒａｃｅ　ｔｈｅ　ｔｕｂｅ，　ｆｒｅｅ　ｙｏｕｒ　ｓｏｕｌ】
+                    </span>
+                <br>
+                🐟🐟🐟
+                <br>
+                <span style="background: #fff">ｍｕｓｉｃ：░<a href="https://plaza.one/" target="_blank">ｐｌａｚａ．ｏｎｅ　（し印ヿ）</a></span>
+                <br>
+                🐟🐟🐟
+            </div>
+            <div id="playpause" style="z-index: 2; position: fixed; bottom: 30px; right: 30px;">
+                <img id="unmute" width="200" height="200" src="/mute_small.png">
+                <img id="mute" class="hidden" width="200" height="200" src="/unmute_small.png">
+            </div>
+        </div>
+        <div id="vidcontain">
+            <video loop autoplay muted>
+                <source src="/vaporfish_compressed3.ogg" type="video/ogg">
+            </video>
+        </div>
+        <audio id="audio-element" crossorigin="anonymous" preload="auto" src="https://radio.plaza.one/ogg"></audio>
+    </div>
+    <script>
+        var playpausebutton = document.querySelector('#playpause');
+        var mutebtn = document.querySelector('#mute');
+        var unmutebtn = document.querySelector('#unmute');
+        var audio = document.querySelector('#audio-element');
+        var body = document.querySelector('body');
+
+        playpausebutton.addEventListener('click', function (e) {
+            if(e.target.id === 'unmute') {
+                audio.play()
+                unmutebtn.classList.toggle('hidden');
+                mutebtn.classList.toggle('hidden');
+                body.classList.toggle('paused');
+            } else {
+                audio.pause()
+                unmutebtn.classList.toggle('hidden');
+                mutebtn.classList.toggle('hidden');
+                body.classList.toggle('paused');
+            }
+        });
+    </script>
+</body>
+
+</html>
