@@ -77,6 +77,10 @@
             opacity: 1;
         }
 
+        #overlay.forceShow {
+            opacity: 1 !important;
+        }
+
         #playpause {
             z-index: 2;
             position: fixed;
@@ -138,6 +142,7 @@
         var unmutebtn = document.querySelector('#unmute');
         var audio = document.querySelector('#audio-element');
         var body = document.querySelector('body');
+        var overlay = document.querySelector('#overlay');
 
         playpausebutton.addEventListener('click', function (e) {
             if (e.target.id === 'unmute') {
@@ -151,6 +156,13 @@
                 mutebtn.classList.toggle('hidden');
                 body.classList.toggle('paused');
             }
+        });
+
+        overlay.addEventListener('mouseover', function() {
+            overlay.classList.add('forceShow');
+        });
+        overlay.addEventListener('mouseout', function() {
+            overlay.classList.remove('forceShow');
         });
     </script>
 </body>
