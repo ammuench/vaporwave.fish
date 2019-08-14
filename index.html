@@ -1,9 +1,25 @@
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>v a p o r w a v e . f i s h</title>
+    <!-- Primary Meta Tags -->
+    <title>🐟 ｖａｐｏｒｗａｖｅ　ｄｏｔ　ｆｉｓｈ　🐟</title>
+    <meta name="title" content="ｖａｐｏｒｗａｖｅ　ｄｏｔ　ｆｉｓｈ　🐟">
     <meta name="description" content="ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vaporwave.fish/">
+    <meta property="og:title" content="🐟 ｖａｐｏｒｗａｖｅ　ｄｏｔ　ｆｉｓｈ　🐟">
+    <meta property="og:description" content="ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ">
+    <meta property="og:image" content="https://vaporwave.fish/vaporwave_fish.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vaporwave.fish/">
+    <meta property="twitter:title" content="🐟 ｖａｐｏｒｗａｖｅ　ｄｏｔ　ｆｉｓｈ　🐟">
+    <meta property="twitter:description" content="ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ">
+    <meta property="twitter:image" content="https://vaporwave.fish/vaporwave_fish.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22672824-2"></script>
     <script>
@@ -51,123 +67,60 @@
         .hidden {
             display: none;
         }
+
+        #overlay {
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .paused #overlay {
+            opacity: 1;
+        }
+
+        #playpause {
+            z-index: 2;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        @media(max-width: 768px) {
+            #playpause {
+                z-index: 2;
+                position: fixed;
+                top: 30px;
+                right: 30px;
+            }
+        }
     </style>
 </head>
 
 <body style="margin: 0; overflow: hidden;" class="paused">
-    <div id="splash">
-        <div
-            style="display: grid;height: 100vh;width: 100vw;grid-template: 1fr / 1fr;align-items: center;justify-items: center;">
-            <div style="z-index: 2;">
-                <img src="/vaporwave_fish.jpg" width="300" height="300">
-                <br>
-                🐟🐟🐟
-                <br>
-                <span style="background: #fff">ｆｉｓｈｗａｖｅ － ｅｍｂｒａｃｅ ｔｈｅ ｔｕｂｅ， ｆｒｅｅ ｙｏｕｒ ｓｏｕｌ</span>
-                <br>
-                🐟🐟🐟
-            </div>
-        </div>
-        <style>
-            .lighth {
-                position: fixed;
-                bottom: 0;
-                background-color: #fff;
-                height: 300px;
-                width: 100%;
-                perspective: 100px;
-                overflow: hidden
-            }
-
-            .lighth::before {
-                content: '';
-                position: absolute;
-                background: linear-gradient(0, transparent, #fff);
-                top: 0;
-                right: -100vh;
-                left: -100vh;
-                height: 20px;
-                z-index: 99
-            }
-
-            .lightv {
-                position: relative;
-                background-color: #fff;
-                color: #e5279d;
-                height: 100%;
-                width: 100%;
-                transform: rotateX(25deg);
-            }
-
-            .lightv::before {
-                content: '';
-                position: absolute;
-                background-color: currentColor;
-                -webkit-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
-                top: -100vh;
-                bottom: -100vh;
-                left: 50%;
-                width: 10px;
-                box-shadow: -140px 0 0 currentColor, -290px 0 0 currentColor, -440px 0 0 currentColor, -590px 0 0 currentColor, -740px 0 0 currentColor, -890px 0 0 currentColor, -1040px 0 0 currentColor, -1190px 0 0 currentColor,
-                    140px 0 0 currentColor, 290px 0 0 currentColor, 440px 0 0 currentColor, 590px 0 0 currentColor, 740px 0 0 currentColor, 890px 0 0 currentColor, 1040px 0 0 currentColor, 1190px 0 0 currentColor
-            }
-
-            .lightv::after {
-                content: '';
-                position: absolute;
-                background-color: currentColor;
-                top: 0;
-                right: -100vh;
-                left: -100vh;
-                height: 10px;
-                box-shadow: 0 90px 0 0 currentColor, 0 190px 0 currentColor, 0 290px currentColor,
-                    0 -90px 0 0 currentColor, 0 -190px 0 currentColor, 0 -290px currentColor;
-                animation: lightv 1s linear infinite;
-            }
-
-            @keyframes lightv {
-                from {
-                    transform: translateY(0)
-                }
-
-                to {
-                    transform: translateY(97.7px)
-                }
-            }
-        </style>
-        <section class="lighth">
-            <section class="lightv"></section>
-        </section>
-        <div style="position: fixed;top: 0;right: 0;">
-            <a href="https://twitter.com/amuench">🦈@amuench</a>
+    <div id="overlay">
+        <div style="z-index: 2; position: fixed; bottom: 30px; left: 30px;">
+            <img src="/vaporwave_fish.jpg" width="300" height="300">
             <br>
-            <a href="https://twitter.com/RevGhostMusic">👻@RevGhostMusic</a>
+            🐟🐟🐟
+            <br>
+            <span style="font-size: 24px; background: #fff">【ｆｉｓｈｗａｖｅ．　　ｅｍｂｒａｃｅ　ｔｈｅ　ｔｕｂｅ，　ｆｒｅｅ　ｙｏｕｒ　ｓｏｕｌ】
+            </span>
+            <br>
+            🐟🐟🐟
+            <br>
+            <span style="background: #fff">ｍｕｓｉｃ：░<a href="https://plaza.one/" target="_blank">ｐｌａｚａ．ｏｎｅ　（し印ヿ）</a> || <a
+                    href="https://www.patreon.com/nightwaveplaza" target="_blank"><wbr>ｓｕｐｐｏｒｔ</a></span>
+            <br>
+            🐟🐟🐟
         </div>
     </div>
     <div id="vaporfish">
         <div style="position: fixed;top: 0;right: 0; text-align: right;">
-            <a style="color: white;" target="_blank" href="https://twitter.com/amuench">🦈@amuench</a>
+            <a style="color: white;" target="_blank" href="https://twitter.com/amuench">🦈░@░a░m░u░e░n░c░h░</a>
             <br>
-            <a style="color: white;" target="_blank" href="https://twitter.com/RevGhostMusic">👻@RevGhostMusic</a>
+            <a style="color: white;" target="_blank" href="https://twitter.com/RevGhostMusic">👻＠ＲｅｖＧｈｏｓｔＭｕｓｉｃ　゙むシ</a>
         </div>
         <div style="height: 100vh;width: 100vw;">
-            <div style="z-index: 2; position: fixed; bottom: 30px; left: 30px;">
-                <img src="/vaporwave_fish.jpg" width="300" height="300">
-                <br>
-                🐟🐟🐟
-                <br>
-                <span style="background: #fff">【ｆｉｓｈｗａｖｅ．　　ｅｍｂｒａｃｅ　ｔｈｅ　ｔｕｂｅ，　ｆｒｅｅ　ｙｏｕｒ　ｓｏｕｌ】
-                    </span>
-                <br>
-                🐟🐟🐟
-                <br>
-                <span style="background: #fff">ｍｕｓｉｃ：░<a href="https://plaza.one/" target="_blank">ｐｌａｚａ．ｏｎｅ　（し印ヿ）</a></span>
-                <br>
-                🐟🐟🐟
-            </div>
-            <div id="playpause" style="z-index: 2; position: fixed; bottom: 30px; right: 30px;">
+            <div id="playpause">
                 <img id="unmute" width="200" height="200" src="/mute_small.png">
                 <img id="mute" class="hidden" width="200" height="200" src="/unmute_small.png">
             </div>
@@ -187,7 +140,7 @@
         var body = document.querySelector('body');
 
         playpausebutton.addEventListener('click', function (e) {
-            if(e.target.id === 'unmute') {
+            if (e.target.id === 'unmute') {
                 audio.play()
                 unmutebtn.classList.toggle('hidden');
                 mutebtn.classList.toggle('hidden');
